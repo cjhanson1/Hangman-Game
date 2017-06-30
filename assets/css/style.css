@@ -1,0 +1,75 @@
+body {
+	box-sizing: border-box;
+	background-image: url("../images/Adventure-Time.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+h1 {
+	margin-top: 30px;
+	font-weight: bold;
+	font-size: 30pt;
+}
+.header {
+	background-color:white;
+	border:solid black thick;
+	margin:20px 50px;
+	text-align: center;
+	height:100px;
+}
+.wordbox {
+	background-color: white;
+	text-align: center;
+	height: auto;
+	border:solid black thick;
+	margin-right: 200px;
+	margin-left:200px;
+
+}
+.scores {
+	background-color: white;
+	text-align: center;
+	width:14%;
+	margin-right: 43%;
+	margin-left:43%;
+	border:solid black thick;
+	margin-top:30px;
+}
+p {
+	display:inline;
+	font-size: 50pt;
+	width:50px;
+	padding-top: 30px;
+}
+img {
+	width:50%;
+}
+#message {
+	font-size: 100px;
+	color:black;
+	text-shadow: 4px 4px 4px white;
+	display:inline;
+	text-align: center;
+
+}
+.message {
+	width:40%;
+	margin:0 30%;
+}
+.scores1 {
+	display:inline;
+	font-size: 24pt;
+	text-align: center;
+}
+h3 {
+	font-size: 24pt;
+}
+h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size:20pt;
+	text-shadow: 4px 4px 4px white;
+}
+#beginningText {
+	margin-bottom: 20px;
+}
