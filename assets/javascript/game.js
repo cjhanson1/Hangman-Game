@@ -1,5 +1,6 @@
 var wordBank = ["finn", "jake", "lemongrab", "beemo","marceline","dungeon","mathematical"]
 var theWord = wordBank[Math.floor(Math.random()*wordBank.length)];
+var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 console.log(theWord.length)
 var lettersOfTheWord = theWord.split("");
 var reset = 0
@@ -10,6 +11,7 @@ var guessedLetters =[]
 var correctLetters = 0
 var wins = 0
 var losses = 0
+	
 	var displayWins = document.getElementById("scoreWins")
 	displayWins.innerHTML = wins
 	var displayLosses = document.getElementById("scoreLosses")
@@ -29,6 +31,16 @@ function unacceptable() {
 
 document.onkeyup = function(guess) {
 	guessedLetter = guess.key
+	guessedLetter = guessedLetter.toLowerCase();
+
+	var arbitrary1 = 0
+	for (i = 0; i < alphabet.length; i++) {
+	if (guessedLetter === alphabet[i]) {
+		arbitrary1 = 1
+	}
+	}	
+
+if (arbitrary1 === 1) {
 var displayWins = document.getElementById("scoreWins")
 			displayWins.innerHTML = wins
 var displayLosses = document.getElementById("scoreLosses")
@@ -40,7 +52,8 @@ var displayClear = document.getElementById("message")
 	if (reset===1) {
 		var playAgain = confirm("Would you like to play again?")
 		if (playAgain === true) {
-			//THIS IS WHERE THE WHOLE GAME GETS RESET EXCEPT THE SCORES--NEED TO COMPLETE//
+
+//THIS IS WHERE THE WHOLE GAME GETS RESET EXCEPT THE SCORES//
 theWord = wordBank[Math.floor(Math.random()*wordBank.length)];
 lettersOfTheWord = theWord.split("");
 reset = 0
@@ -117,7 +130,7 @@ for(i = 26; i > (lettersOfTheWord.length-1); i=i-1) {
 	
 		}
 	}
-//THIS CODE APPLIES IF GAME IS NOT GETTING RESET--NEED TO COMPLETE--//
+//THIS CODE APPLIES IF GAME IS NOT GETTING RESET//
 	else {
 
 	
@@ -177,4 +190,5 @@ for(i = 26; i > (lettersOfTheWord.length-1); i=i-1) {
 	}
 	}
 	}
-		}
+}
+}
